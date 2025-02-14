@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: nn3wt8vmv-go
+  janus-idp.io/tekton: nn3wt8vmv-go
+  backstage.io/kubernetes-id: nn3wt8vmv-go
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: nn3wt8vmv-go
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
